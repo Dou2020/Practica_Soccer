@@ -2,19 +2,12 @@ CREATE DATABASE practica_soccer;
 
 USE practica_soccer
 
-CREATE TABLE area (
-    id INT PRIMARY KEY,
-    name NVARCHAR(100) NOT NULL UNIQUE
-);
 
 CREATE TABLE teams (
     wyId INT PRIMARY KEY,
     city NVARCHAR(100) NOT NULL,
     name NVARCHAR(100) NOT NULL,
     officialName NVARCHAR(150) NOT NULL,
-    area_id INT,
-    type NVARCHAR(50),
-    FOREIGN KEY (area_id) REFERENCES area(id) ON DELETE SET NULL
 );
 CREATE TABLE role (
     code2 NVARCHAR(3) PRIMARY KEY,
